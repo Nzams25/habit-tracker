@@ -2,7 +2,7 @@
 
 A Python command-line application for creating and managing daily and weekly habits, recording completions, storing data in SQLite, and analysing habit consistency through streak calculations.
 
-**Repository:** https://github.com/Nzams25/habit-tracker
+**Repository:** [https://github.com/Nzams25/habit-tracker](https://github.com/Nzams25/habit-tracker)
 
 ## Project Overview
 
@@ -12,13 +12,13 @@ The application allows users to create habits, record completions, review comple
 
 ## Features
 
-- **Habit management:** Create, track, complete, and manage habits
+- **Habit management:** Create, track, complete, and manage habits.
 - **Daily and weekly habits:** Supports `daily` and `weekly` periodicity.
 - **Persistent storage:** Stores habits and completion timestamps in SQLite.
 - **Habit filtering:** View daily habits and weekly habits separately.
 - **Streak analytics:** Compute maximum streak lengths for specific habits as well as system-wide.
 - **Sample data:** Populate the database with five default habits and sample completion data.
-- Input validation: Enforces valid periodicity values (daily and weekly) when adding habits.
+- **Input validation:** Enforces valid periodicity values (`daily` and `weekly`) when adding habits.
 - **Automated testing:** Uses Python's built-in `unittest` framework.
 
 ## Technologies
@@ -26,10 +26,10 @@ The application allows users to create habits, record completions, review comple
 | Technology | Purpose |
 |---|---|
 | Python 3 | Application logic and command-line interface |
-| SQLite | Saves habits and completion histories to long-term storage. |
-| `sqlite3` | Python interface to SQLite |
-| `datetime` | Timestamps and date-based streak calculations |
-| `unittest` | Automated testing |
+| SQLite | Saves habits and completion histories to long-term storage |
+| sqlite3 | Python interface to SQLite |
+| datetime | Timestamps and date-based streak calculations |
+| unittest | Automated testing |
 
 The project uses Python's standard library and does not require a separate database server or third-party packages in its current implementation.
 
@@ -54,19 +54,28 @@ The application creates `habits.db` locally when using its default database conf
 ### Requirements
 
 - Python 3
-- Git, if cloning the repository
-- Can be run through a standard command shell or Python IDEs like PyCharm
+- Git (required only when cloning the repository)
+- A standard command-line terminal or Python IDE such as PyCharm
 
 ### 1. Clone the repository
 
+Open a terminal and execute:
+
 ```bash
 git clone https://github.com/Nzams25/habit-tracker.git
+```
+
+Navigate into the project directory:
+
+```bash
 cd habit-tracker
 ```
 
 Alternatively, download the repository as a ZIP file from GitHub and extract it.
 
-### 2. Check Python
+### 2. Check Python Installation
+
+Check your Python version:
 
 ```bash
 python --version
@@ -80,19 +89,27 @@ py --version
 
 ### 3. Run the application
 
-From the project directory, execute:
+Run the application:
 
 ```bash
 python main.py
 ```
 
+### 4. Run the automated tests
+
+Execute:
+
+```bash
+python -m unittest discover -v
+```
+
 On Windows, you can also use:
 
 ```powershell
-py main.py
+py -m unittest discover -v
 ```
 
-No third-party package installation is required, as the application runs entirely on Python's standard library.
+The application uses Python's standard library and SQLite, so no third-party package installation is required.
 
 ## Using the Application
 
@@ -114,7 +131,7 @@ The command-line menu provides the following actions:
 
 Follow the prompts displayed in the terminal. Enter a habit name and select either `daily` or `weekly` when creating a habit.
 
-### Sample Data
+## Sample Data
 
 The sample-data loader provides five predefined habits:
 
@@ -171,7 +188,7 @@ Run all discovered tests:
 python -m unittest discover -v
 ```
 
-### Test Status
+## Test Status
 
 The latest reported test run completed with 24 passing tests:
 
@@ -214,16 +231,14 @@ This project provided practical experience with:
 
 ### Application Menu
 
-![Habit Tracker application menu](screenshots/habit-tracker-menu.png)
+![Habit Tracker application menu](Screenshots/habit-tracker-menu.png)
 
 ### Daily Habits
 
-![Habit Tracker daily habits](screenshots/habit-tracker-daily-habit.png)
+![Habit Tracker daily habits](Screenshots/habit-tracker-daily-habit.png)
 
----
 ---
 
 **Author:** Bwene Nzams
 
 **Status:** Learning project — ongoing development and documentation improvements.
-
